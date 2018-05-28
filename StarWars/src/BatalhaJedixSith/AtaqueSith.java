@@ -29,13 +29,19 @@ public class AtaqueSith extends Event{
 	public void description(int n, Mestre m, Lord l) {
 		
 		tipoAtaque = n;
-		if (tipoAtaque == 1 && m.esquivaMestre == false) System.out.println("o Lord Sith causou 1000 de dano no Mestre Jedi");
-		if (tipoAtaque == 2) System.out.println("o Lord Sith causou 200 de dano no Mestre Jedi");
-		if (tipoAtaque == 3) System.out.println("o Lord Sith causou 400 de dano no Mestre Jedi");
-		if (tipoAtaque == 4) System.out.println("o Lord Sith causou 100 de dano no Mestre Jedi");
+		if (tipoAtaque == 1 && m.esquivaMestre == false) {
+			System.out.println("o Lord Sith causou " + l.getDano() + " de dano no Mestre Jedi" + "\n" +
+							   "a vida atual do Mestre Jedi eh " + m.getVida());
+		}
+		if (tipoAtaque != 1 && tipoAtaque != 5) {
+			System.out.println("o Lord Sith causou " + l.getDano() + " de dano no Mestre Jedi" + "\n" +
+							   "a vida atual do Mestre Jedi eh " + m.getVida());
+		}
 		if(tipoAtaque == 5) System.out.println("O Lord Sith esquivou");
-		else if (tipoAtaque == 1 && m.esquivaMestre == true) System.out.println("O Lord Sith nao causou dano");
-		
+		else if (tipoAtaque == 1 && m.esquivaMestre == true) {
+			System.out.println("O Lord Sith nao causou dano" + "\n" +
+							   "a vida atual do Mestre Jedi eh " + m.getVida());
+		}
 	}
 
 }

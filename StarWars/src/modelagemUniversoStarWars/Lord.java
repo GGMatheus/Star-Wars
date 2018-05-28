@@ -3,8 +3,10 @@ package modelagemUniversoStarWars;
 public class Lord extends Sith {
 	private long campoDeVidencia;
 	private SabreDeLuz sabre;
-	private long vida;
+	private double vida;
 	private int dominioSabre;
+	private int dominioForca;
+	private double dano;
 	public boolean esquivaLord = false;
 	
 	public Lord(double porcentagem, long campoDeVidencia, SabreDeLuz sabre) {
@@ -13,7 +15,7 @@ public class Lord extends Sith {
 		this.sabre = sabre;
 	}
 	
-	public Lord(double porcentagem, SabreDeLuz sabre, long vida, int dominioSabre) {
+	public Lord(double porcentagem, SabreDeLuz sabre, double vida, int dominioSabre, int dominioForca) {
 		super(porcentagem);
 		this.sabre = sabre;
 		this.vida = vida;
@@ -36,11 +38,11 @@ public class Lord extends Sith {
 		this.sabre = sabre;
 	}
 
-	public long getVida() {
+	public double getVida() {
 		return vida;
 	}
 
-	public void setVida(long vida) {
+	public void setVida(double vida) {
 		this.vida = vida;
 	}
 
@@ -52,31 +54,51 @@ public class Lord extends Sith {
 		this.dominioSabre = dominioSabre;
 	}
 	
+	public int getDominioForca() {
+		return dominioForca;
+	}
+
+	public void setDominioForca(int dominioForca) {
+		this.dominioForca = dominioForca;
+	}
+
+	public double getDano() {
+		return dano;
+	}
+
+	public void setDano(double dano) {
+		this.dano = dano;
+	}
+
 	public void atacarComSabre(Mestre m) {
-		String tipo = "sabre";
-		long vida;
-		vida = m.getVida() - 1000;
+		double damage, vida;
+		damage = (500 * (1 + (0.01 * dominioForca)) + 500 * (1 + (0.01 * dominioSabre)));
+		vida = m.getVida() - damage;
+		dano = damage;
 		m.setVida(vida);
 	}
 	
 	public void atacarComRelampagoDaForca(Mestre m) {
-		String tipo = "forca";
-		long vida;
-		vida = m.getVida() - 200;
+		double damage, vida;
+		damage = (100 * (1 + (0.01 * dominioForca)) + 100 * (1 + (0.01 * dominioSabre)));
+		dano = damage;
+		vida = m.getVida() - damage;
 		m.setVida(vida);
 	}
 	
 	public void atacarComFuriaDaForca(Mestre m) {
-		String tipo = "forca";
-		long vida;
-		vida = m.getVida() - 400;
+		double damage, vida;
+		damage = (200 * (1 + (0.01 * dominioForca)) + 200 * (1 + (0.01 * dominioSabre)));
+		dano = damage;
+		vida = m.getVida() - damage;
 		m.setVida(vida);
 	}
 	
 	public void atacarComEstrangulamentoDaForca(Mestre m) {
-		String tipo = "forca";
-		long vida;
-		vida = m.getVida() - 100;
+		double damage, vida;
+		damage = (50 * (1 + (0.01 * dominioForca)) + 50 * (1 + (0.01 * dominioSabre)));
+		dano = damage;
+		vida = m.getVida() - damage;
 		m.setVida(vida);
 	}
 	
