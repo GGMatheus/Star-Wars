@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Jedi extends Ordem{
 	private double pazInterna; //porcentagem

@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Conselho extends Academia {
 	private String nomeConselho;

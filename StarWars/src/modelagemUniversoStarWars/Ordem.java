@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public abstract class Ordem {
 	private boolean telepatia = false;

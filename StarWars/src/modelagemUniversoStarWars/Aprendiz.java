@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Aprendiz extends Sith {
 	public boolean sabeConstruirSabreDeLuz = false;

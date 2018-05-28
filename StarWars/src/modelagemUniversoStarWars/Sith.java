@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Sith extends Ordem {
 	private double raiva; //porcentagem

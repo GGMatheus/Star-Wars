@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Youngling extends Jedi {
 	private Cla claDeTreinamento;

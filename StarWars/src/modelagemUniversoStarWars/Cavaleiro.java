@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Cavaleiro extends Jedi {
 	private SabreDeLuz sabre;

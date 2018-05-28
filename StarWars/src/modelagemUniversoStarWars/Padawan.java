@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class Padawan extends Jedi {
 	public boolean sabeConstruirSabreDeLuz = false;

@@ -1,6 +1,6 @@
-package Classes;
+package modelagemUniversoStarWars;
 
-public abstract class Planeta {
+public class Planeta {
 	private String nome;
 	private String cor;
 	private String sistema;

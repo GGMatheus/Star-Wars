@@ -1,4 +1,4 @@
-package Classes;
+package modelagemUniversoStarWars;
 
 public class SabreDeLuz {
 	private String tipoDeCristal;
